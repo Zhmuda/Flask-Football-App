@@ -1,0 +1,42 @@
+/* Стили для контейнера матчей */
+.matches-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для каждого матча */
+.match {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Стили для названия команд */
+.team-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Стили для данных прогноза */
+.prediction-data {
+    margin-top: 10px;
+}
+
+/* Стили для каждого элемента данных прогноза */
+.prediction-item {
+    margin-bottom: 5px;
+}
+
+/* Стили для текста прогноза */
+.advice {
+    font-style: italic;
+    color: #007bff;
+}
+
+/* Стили для процентных данных */
+.percent-data {
+    font-weight: bold;
+    color: #28a745;
+}

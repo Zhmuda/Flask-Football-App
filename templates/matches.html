@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Matches</h1>
+    {% for match in matches %}
+    <div class="match">
+        <h2>{{ match.home_team }} vs {{ match.away_team }}</h2>
+        <button onclick="loadMatchStats('{{ match.fixture_id }}')">Show Stats</button>
+        <div id="stats_{{ match.fixture_id }}" style="display: none;"></div>
+    </div>
+    {% endfor %}
+
+    <script>
+        function loadMatchStats(fixtureId) {
+            const statsDiv = document.getElementById(`stats_${fixtureId}`);
+            fetch(`/stats/${fixtureId}`)
+                .then(response => response.text())
+                .then(data => {
+                    statsDiv.style.display = 'block';
+                    statsDiv.innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching match stats:', error));
+        }
+    </script>
+</body>
+</html>

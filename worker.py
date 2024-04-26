@@ -16,7 +16,7 @@ def find_matches():
         querystring = {
             "league": league_id,
             "season": "2023",
-            "date": '2024-04-28'
+            "date": today
         }
         headers = {
             'x-apisports-key': "d687e02afc3ddcaf9299988a94faf74f"

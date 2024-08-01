@@ -15,7 +15,7 @@ def find_matches():
         url = "https://v3.football.api-sports.io/fixtures"
         querystring = {
             "league": league_id,
-            "season": "2023",
+            "season": "2024",
             "date": today
         }
         headers = {

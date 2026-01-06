@@ -2,7 +2,6 @@ import requests
 from datetime import date
 
 def find_matches():
-    print('zapros')
     # Список интересующих лиг
     leagues = ["235", "123"]
 
@@ -15,7 +14,7 @@ def find_matches():
         url = "https://v3.football.api-sports.io/fixtures"
         querystring = {
             "league": league_id,
-            "season": "2024",
+            "season": "2025",
             "date": today
         }
         headers = {
